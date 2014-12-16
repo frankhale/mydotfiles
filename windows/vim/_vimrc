@@ -29,6 +29,7 @@ set shiftwidth=2
 set expandtab
 set showmatch
 set nofoldenable
+set noerrorbells visualbell t_vb=
 
 " For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
 " let &guioptions = substitute(&guioptions, "t", "", "g")
@@ -51,20 +52,23 @@ if &t_Co > 2 || has("gui_running")
   syntax on
   set background=dark
   set hlsearch
-  set guifont=Consolas:h14 
+  set guifont=Fixed
 
   "set guifont=Console
   set guioptions-=m " No menu
   set guioptions-=T " No toolbar
   "set guioptions+=c " Use console dialogs where possible
   set textwidth=80 "  2 for the command line
-  set lines=52 " add columns for the Project plugin
-  set columns=110
-  colorscheme candycode
+  set lines=57 columns=160
+  set colorcolumn=80
+  colorscheme calmar256-light
+  highlight ColorColumn guibg=Orange
 endif
 
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
+
+  autocmd GUIEnter * set visualbell t_vb=
 
   " Enable file type detection.
   " Use the default filetype settings, so that mail gets 'tw' set to 72,
