@@ -61,8 +61,11 @@ if &t_Co > 2 || has("gui_running")
   set textwidth=80 "  2 for the command line
   set lines=57 columns=160
   set colorcolumn=80
-  colorscheme calmar256-light
-  highlight ColorColumn guibg=Orange
+  "colorscheme lettuce
+  colorscheme metacosm
+  highlight ColorColumn guibg=Brown
+  "colorscheme calmar256-light
+  "highlight ColorColumn guibg=Orange
 endif
 
 " Only do this part when compiled with support for autocommands.
