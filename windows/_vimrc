@@ -30,6 +30,8 @@ set expandtab
 set showmatch
 set nofoldenable
 set noerrorbells visualbell t_vb=
+set statusline=%<%f\ %h%m%r\ %L\ %y%=%{v:register}\ %-14.(%l,%c%V%)\ %P\
+set laststatus=2
 
 " For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
 " let &guioptions = substitute(&guioptions, "t", "", "g")
