@@ -12,7 +12,7 @@ call vundle#begin(path)
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
+Plugin 'mxw/vim-jsx', {'rtp': 'after/'}
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
