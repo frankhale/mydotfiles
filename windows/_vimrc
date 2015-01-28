@@ -29,8 +29,6 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-
-
 " When started as "evim", evim.vim will already have done these settings.
 if v:progname =~? "evim"
   finish
@@ -42,17 +40,11 @@ set nocompatible
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
-
-"if has("vms")
-  set nobackup		" do not keep a backup file, use versions instead
-"else
-"  set backup		" keep a backup file
-"endif
-set history=50		" keep 50 lines of command line history
+set nobackup	" do not keep a backup file, use versions instead
+set history=50	" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
-set incsearch		" do incremental searching
-
+set incsearch	" do incremental searching
 set number
 set smartindent
 set softtabstop=2
@@ -86,20 +78,15 @@ if &t_Co > 2 || has("gui_running")
   syntax on
   set background=dark
   set hlsearch
-  set guifont=Fixed
-
-  "set guifont=Console
+  set guifont=Consolas:h14:cANSI
   set guioptions-=m " No menu
   set guioptions-=T " No toolbar
   "set guioptions+=c " Use console dialogs where possible
   set textwidth=80 "  2 for the command line
-  set lines=57 columns=160
+  "set lines=37 columns=125
   set colorcolumn=80
-  "colorscheme lettuce
-  colorscheme metacosm
+  colorscheme candycode
   highlight ColorColumn guibg=Brown
-  "colorscheme calmar256-light
-  "highlight ColorColumn guibg=Orange
 endif
 
 " Only do this part when compiled with support for autocommands.
@@ -133,9 +120,7 @@ if has("autocmd")
   augroup END
 
 else
-
   set autoindent		" always set autoindenting on
-
 endif " has("autocmd")
 
 " Convenient command to see the difference between the current buffer and the
