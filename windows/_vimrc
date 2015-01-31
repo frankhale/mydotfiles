@@ -12,6 +12,7 @@ call vundle#begin(path)
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 Plugin 'pangloss/vim-javascript'
+Plugin 'jelera/vim-javascript-syntax'
 Plugin 'mxw/vim-jsx', {'rtp': 'after/'}
 
 " All of your Plugins must be added before the following line
@@ -78,15 +79,15 @@ if &t_Co > 2 || has("gui_running")
   syntax on
   set background=dark
   set hlsearch
-  set guifont=Consolas:h14:cANSI
+  set guifont=Consolas:h16:cANSI
   set guioptions-=m " No menu
   set guioptions-=T " No toolbar
   "set guioptions+=c " Use console dialogs where possible
   set textwidth=80 "  2 for the command line
   "set lines=37 columns=125
   set colorcolumn=80
-  colorscheme candycode
-  highlight ColorColumn guibg=Brown
+  colorscheme nuvola
+  highlight ColorColumn guibg=Orange
 endif
 
 " Only do this part when compiled with support for autocommands.
