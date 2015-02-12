@@ -57,6 +57,7 @@ set nofoldenable
 set noerrorbells visualbell t_vb=
 set statusline=%<%f\ %h%m%r\ %L\ %y%=%{v:register}\ %-14.(%l,%c%V%)\ %P\
 set laststatus=2
+set clipboard=unnamed
 
 " For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
 " let &guioptions = substitute(&guioptions, "t", "", "g")
@@ -79,15 +80,14 @@ if &t_Co > 2 || has("gui_running")
   syntax on
   set background=dark
   set hlsearch
-  set guifont=Consolas:h16:cANSI
+  set guifont=Consolas:h14:cANSI
   set guioptions-=m " No menu
   set guioptions-=T " No toolbar
   "set guioptions+=c " Use console dialogs where possible
   set textwidth=80 "  2 for the command line
-  "set lines=37 columns=125
   set colorcolumn=80
-  colorscheme nuvola
-  highlight ColorColumn guibg=Orange
+  colorscheme zmrok
+  highlight ColorColumn guibg=Brown
 endif
 
 " Only do this part when compiled with support for autocommands.
